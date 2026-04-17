@@ -1,0 +1,67 @@
+{
+  "common": {
+    "name": "camera-snapshot",
+    "version": "0.1.0",
+    "news": {
+      "0.1.0": {
+        "en": "initial release",
+        "de": "Erstveröffentlichung"
+      }
+    },
+    "title": "Camera Snapshot",
+    "titleLang": {
+      "en": "Camera Snapshot",
+      "de": "Kamera Snapshot"
+    },
+    "desc": {
+      "en": "Periodic camera snapshots for Ring and Tapo without triggering full recordings",
+      "de": "Periodische Kamera-Snapshots für Ring und Tapo, ohne vollständige Aufnahmen auszulösen"
+    },
+    "authors": [
+      "Manus AI"
+    ],
+    "keywords": [
+      "camera",
+      "snapshot",
+      "ring",
+      "tapo",
+      "surveillance"
+    ],
+    "platform": "Javascript/Node.js",
+    "main": "main.js",
+    "icon": "camera-snapshot.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/ManusAI/ioBroker.camera-snapshot/master/admin/camera-snapshot.png",
+    "type": "multimedia",
+    "native": {
+      "cameras": []
+    }
+  },
+  "native": {
+    "cameras": []
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Device connection status",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
+}

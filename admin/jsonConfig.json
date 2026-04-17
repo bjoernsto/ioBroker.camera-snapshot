@@ -1,0 +1,61 @@
+{
+  "type": "tabs",
+  "items": {
+    "settings": {
+      "type": "panel",
+      "label": "General Settings",
+      "items": {
+        "ringRefreshToken": {
+          "type": "text",
+          "label": "Ring Refresh Token",
+          "sm": 12,
+          "md": 8,
+          "help": "Get your token using 'npx ring-client-api auth' in your terminal."
+        },
+        "cameras": {
+          "type": "table",
+          "label": "Cameras",
+          "items": [
+            {
+              "type": "text",
+              "attr": "name",
+              "title": "Camera Name",
+              "width": "20%"
+            },
+            {
+              "type": "select",
+              "attr": "type",
+              "title": "Type",
+              "options": [
+                { "value": "ring", "label": "Ring" },
+                { "value": "tapo", "label": "Tapo (RTSP)" },
+                { "value": "rtsp", "label": "Generic RTSP" }
+              ],
+              "width": "15%"
+            },
+            {
+              "type": "number",
+              "attr": "interval",
+              "title": "Interval (s)",
+              "default": 60,
+              "width": "10%"
+            },
+            {
+              "type": "text",
+              "attr": "url",
+              "title": "RTSP URL (Tapo/RTSP)",
+              "width": "35%",
+              "help": "rtsp://user:pass@IP:554/stream1"
+            },
+            {
+              "type": "text",
+              "attr": "ringName",
+              "title": "Ring Name/ID",
+              "width": "20%"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
