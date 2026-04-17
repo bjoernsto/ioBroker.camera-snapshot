@@ -33,6 +33,9 @@
     "enabled": true,
     "extIcon": "https://raw.githubusercontent.com/ManusAI/ioBroker.camera-snapshot/master/admin/camera-snapshot.png",
     "type": "multimedia",
+    "mode": "daemon",
+    "restartDelay": 5000,
+    "loglevel": "info",
     "adminUI": {
       "config": "json"
     },

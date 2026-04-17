@@ -21,7 +21,7 @@ class CameraSnapshot extends utils.Adapter {
 
     async onReady() {
         this.log.info("Adapter starting...");
-        this.setState("info.connection", false, true);
+        await this.setStateAsync("info.connection", false, true);
 
         const cameras = this.config.cameras || [];
         if (cameras.length === 0) {
@@ -45,7 +45,7 @@ class CameraSnapshot extends utils.Adapter {
             await this.setupCamera(camera);
         }
 
-        this.setState("info.connection", true, true);
+        await this.setStateAsync("info.connection", true, true);
     }
 
     async setupCamera(camera) {
