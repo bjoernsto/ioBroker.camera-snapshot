@@ -33,6 +33,9 @@
     "enabled": true,
     "extIcon": "https://raw.githubusercontent.com/ManusAI/ioBroker.camera-snapshot/master/admin/camera-snapshot.png",
     "type": "multimedia",
+    "adminUI": {
+      "config": "json"
+    },
     "native": {
       "cameras": []
     }
